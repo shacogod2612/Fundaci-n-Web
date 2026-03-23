@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     
@@ -66,19 +67,19 @@
         <h2>Nuestros Proyectos</h2>
         <div>
             <div>
-                <img src="img1.jpg" alt="Proyecto">
-                <h3>Proyecto 1</h3>
-                <p>Descripción breve.</p>
+                <img src="img/niñezYeducacion.jpeg" alt="entrega de utiles a niños ">
+                <h3>Niñez y Educación</h3>
+                <p>Enfoque: Apoyo al desarrollo integral de niños y niñas en contextos vulnerables.</p>
             </div>
             <div>
-                <img src="img2.jpg" alt="Proyecto">
-                <h3>Proyecto 2</h3>
-                <p>Descripción breve.</p>
+                <img src="img/accioncomunitaria.jpeg" alt="entrega de flores">
+                <h3>Acción Comunitaria</h3>
+                <p>Enfoque: Fortalecer el tejido social a través de actos de servicio, solidaridad y cercanía con la comunidad.</p>
             </div>
             <div>
-                <img src="img3.jpg" alt="Proyecto">
-                <h3>Proyecto 3</h3>
-                <p>Descripción breve.</p>
+                <img src="img/bienestaranimal.jpeg" alt="ayudando animales">
+                <h3>Bienestar Animal</h3>
+                <p>Enfoque: Protección, cuidado y apoyo a animales en condición de vulnerabilidad.</p>
             </div>
         </div>
     </section>
@@ -113,9 +114,11 @@
         <div class="redes-cuadro ">
             <a href="https://www.instagram.com/jachepafundacion/" target="_blank">
                 <i class="fa-brands fa-instagram"></i>
+                <p>@jachepafundacion</p>
             </a>
             <a href="mailto:jachepafundacion@gmail.com" class="email">
                 <i class="fa-solid fa-envelope"></i>
+                <p>jachepafundacion@gmail.com</p>
             </a>
         </div>
     </section>
@@ -127,59 +130,9 @@
 
     <!-- FOOTER -->
     <footer>
-        <p>© Fundación 2026 | Todos los derechos reservados</p>
+        <p>© Jachepa 2026 | Todos los derechos reservados</p>
     </footer>
-    <script>
-  const toggle = document.getElementById("menu-toggle");
-    const nav = document.getElementById("nav");
-    const overlay = document.getElementById("overlay");
-
-    toggle.addEventListener("click", () => {
-        toggle.classList.toggle("active");
-        nav.classList.toggle("active");
-        overlay.classList.toggle("active");
-    });
-
-    overlay.addEventListener("click", () => {
-        toggle.classList.remove("active");
-        nav.classList.remove("active");
-        overlay.classList.remove("active");
-    });
-
-    // Cerrar al hacer click en links
-    document.querySelectorAll("#nav a").forEach(link => {
-        link.addEventListener("click", () => {
-            toggle.classList.remove("active");
-            nav.classList.remove("active");
-            overlay.classList.remove("active");
-        });
-    });
-    // LIGHTBOX
-    const imagenes = document.querySelectorAll("#galeria img");
-    const lightbox = document.getElementById("lightbox");
-    const imgGrande = document.getElementById("img-grande");
-    const cerrar = document.getElementById("cerrar");
-
-    // Abrir imagen
-    imagenes.forEach(img => {
-        img.addEventListener("click", () => {
-            lightbox.style.display = "flex";
-            imgGrande.src = img.src;
-        });
-    });
-
-    // Cerrar con X
-    cerrar.addEventListener("click", () => {
-        lightbox.style.display = "none";
-    });
-
-    // Cerrar haciendo click afuera
-    lightbox.addEventListener("click", (e) => {
-        if (e.target !== imgGrande) {
-            lightbox.style.display = "none";
-        }
-    });
-    </script>
+    <script src="script.js"> </script>
     
 </body>
 </html>

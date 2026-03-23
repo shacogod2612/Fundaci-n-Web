@@ -3,7 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+     font-family: 'Open Sans', sans-serif;
+     font-weight: 400;
 }
 
 body {
@@ -12,9 +13,24 @@ body {
     line-height: 1.6;
 }
 
+body, p, li {
+    font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #2c3e50; 
+}
+
+a, .btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
 /* HEADER */
 header {
-    position: relative; /* importante para el toggle y nav */
+    position: relative; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,9 +42,9 @@ header {
 
 /* LOGO */
 header .logo {
-    height: 50px; /* Altura deseada */
-    width: auto;  /* Mantiene proporción */
-    object-fit: contain; /* Evita deformar la imagen */
+    height: 50px; 
+    width: auto;  
+    object-fit: contain; 
 }
 
 header h2 {
@@ -89,6 +105,7 @@ section h2 {
     justify-content: center;
     color: #3F39A3;
     font-size: 2rem;
+    padding-bottom: 1rem;
 }
 
 section h2::before,
@@ -121,7 +138,7 @@ section h2::after {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    border: 3px solid #3F39A3; /* borde del mismo color que el título */
+    border: 3px solid #3F39A3; 
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -153,7 +170,7 @@ section h2::after {
 
 #proyectos img {
     width: 100%;
-    height: 180px;
+    height: 350px;
     object-fit: cover;
 }
 
@@ -163,7 +180,7 @@ section h2::after {
 
 /* GALERÍA */
 #galeria div {
-    column-count: 4;        /* número de columnas en desktop */
+    column-count: 4;        
     column-gap: 15px;
 }
 
@@ -173,7 +190,7 @@ section h2::after {
     margin-bottom: 15px;
     border-radius: 10px;
     border: 3px solid #3F39A3;
-    break-inside: avoid;    /* evita que se corten */
+    break-inside: avoid;   
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -185,8 +202,8 @@ section h2::after {
 #galeria div img {
     width: 100%;
     height: 393px;
-    object-fit: contain; /* toda la imagen visible */
-    background: #f5f7fa; /* relleno en los espacios vacíos */
+    object-fit: contain; 
+    background: #f5f7fa; 
     border-radius: 10px;
 }
 
@@ -306,7 +323,7 @@ footer {
 
 /* HAMBURGUESA */
 .menu-toggle {
-    display: none; /* se activa en móvil */
+    display: none; 
     flex-direction: column;
     cursor: pointer;
     z-index: 1001;
@@ -359,10 +376,19 @@ footer {
         width: 100%;
         height: 400px;
     }
+     #hero {
+        height: 45vh;           
+        padding: 40px 20px;      
+        background-position: center center; 
+    }
 }
 
 @media (max-width: 768px) {
 
+    section h2 {
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+    }
     .menu-toggle {
         display: flex;
     }
@@ -371,7 +397,7 @@ footer {
         position: absolute;
         top: 70px;
         right: 0;
-        background: #0d6efd;
+        background: #3F39A3;
         width: 100%;
         display: none;
         flex-direction: column;
@@ -390,9 +416,9 @@ footer {
     }
 
      #hero {
-        height: 25vh;           /* Ocupa toda la pantalla del móvil */
-        padding: 40px 20px;      /* Ajusta padding para que no corte el texto */
-        background-position: center center; /* Centra la imagen */
+        height: 25vh;           
+        padding: 40px 20px;      
+        background-position: center center; 
     }
 
     #hero img {
@@ -410,13 +436,26 @@ footer {
         width: 100%;
         height: 250px;
     }
-     .redes-cuadro {
-        flex-direction: column;
+    .redes-cuadro {
+        flex-direction: column; 
         gap: 20px;
+        padding: 20px;
+        max-width: 90%; 
     }
 
     .redes-cuadro a {
-        justify-content: center;
+        font-size: 28px; 
+        justify-content: center; 
+        gap: 8px;
+    }
+    .redes-cuadro a p {
+        font-size: 18px;
     }
 
+    .redes-cuadro a.email {
+        font-size: 22px;
+        padding: 8px 12px;
+    }
 }
+
+
