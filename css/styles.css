@@ -253,6 +253,9 @@ section h2::after {
 }
 
 /* INSTAGRAM */
+.redes-cuadro a i.fa-brands {
+    color: #188509;
+}
 .redes-cuadro a i.fa-instagram {
     color: #E1306C;
 }
