@@ -478,4 +478,27 @@ footer {
     }
 }
 
+@media (max-width: 380px) {
+         .redes-cuadro {
+        flex-direction: column; 
+        gap: 20px;
+        padding: 20px;
+        max-width: 100%; 
+    }
+
+    .redes-cuadro a {
+        font-size: 25px; 
+        justify-content: center; 
+        gap: 8px;
+    }
+    .redes-cuadro a p {
+        font-size: 15px;
+    }
+
+    .redes-cuadro a.email {
+        font-size: 19px;
+        padding: 8px 12px;
+    }
+}
+
 
