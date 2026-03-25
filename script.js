@@ -47,16 +47,19 @@
             lightbox.style.display = "none";
         }
     });
-const mostrarElementos = () => {
-    const elementos = document.querySelectorAll('.revelar');
-    elementos.forEach(el => {
-        const posicion = el.getBoundingClientRect().top;
-        // Si el elemento ya está a la vista (o casi a la vista), lo activamos
-        if (posicion < window.innerHeight - 50) {
-            el.classList.add('activo');
-        }
-    });
-};
+    const mostrarElementos = () => {
+        const elementos = document.querySelectorAll('.revelar');
+        elementos.forEach(el => {
+            const posicion = el.getBoundingClientRect().top;
+            const alturaPantalla = window.innerHeight;
+
+            // Cambiamos el cálculo: si la parte superior del elemento 
+            // entra al 85% de la pantalla, ya se activa.
+            if (posicion < alturaPantalla * 0.85) {
+                el.classList.add('activo');
+            }
+        });
+    };
 
 // 1. Escuchar el scroll (esto ya lo tienes)
 window.addEventListener('load', mostrarElementos);
