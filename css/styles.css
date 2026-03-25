@@ -529,7 +529,7 @@ footer {
     nav.active {
         display: flex;
     }
-
+    
      #hero {
         height: 25vh;           
         padding: 40px 20px;      
@@ -541,9 +541,19 @@ footer {
         height: auto;
     }
 
-    #hero p {
-        font-size: 0.8rem;        
+    .btn-sumate {
+        padding: 10px 25px;    
+        margin-top: 15px;      
+        width: 80%;           
+        max-width: 250px; 
+        margin-bottom: 20px;    
     }
+
+    #hero p {
+        font-size: 1rem;      
+        padding-bottom: 0.5rem;
+    }
+
     #galeria div {
         column-count: 2;
     }
