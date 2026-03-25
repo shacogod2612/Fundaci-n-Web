@@ -71,9 +71,3 @@ document.addEventListener("DOMContentLoaded", () => {
         aparecerAlScroll.observe(el);
     });
 });
-
-// 1. Escuchar el scroll (esto ya lo tienes)
-window.addEventListener('load', mostrarElementos);
-
-// 2. ¡EL TRUCO! Ejecutarlo apenas cargue el sitio
-window.addEventListener('DOMContentLoaded', mostrarElementos);
