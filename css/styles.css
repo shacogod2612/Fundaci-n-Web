@@ -6,6 +6,10 @@
      font-family: 'Open Sans', sans-serif;
      font-weight: 400;
 }
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; 
+}
 
 body {
     background-color: #FAF5EF;
@@ -37,6 +41,11 @@ header {
     padding: 15px 8%;
     background: #3F39A3;
     color: white;
+    position: sticky; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
 
@@ -89,8 +98,13 @@ nav a:hover {
 }
 
 #hero p {
-    padding-bottom: 5rem;
+    padding-bottom: 1rem;
     font-size: 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
 .hero h1 {
@@ -102,12 +116,28 @@ nav a:hover {
     color: #3F39A3;
 }
 
-.hero p {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    text-align: center;
+.btn-sumate {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 50px; /* Bordes redondeados tipo píldora */
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* Efecto al pasar el mouse */
+.btn-sumate:hover {
+    background-color: #ffffff;
+    color: #3F39A3; /* El púrpura de tu marca */
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 /* SECCIONES */
@@ -230,6 +260,58 @@ section h2::after {
     text-align: center;
     border-radius: 10px;
 }
+/* Estilo para la lista de donaciones dentro de la noticia */
+.lista-donaciones {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.lista-donaciones li {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lista-donaciones i {
+    color: #E1306C; /* Un color rojizo para los corazones */
+    font-size: 0.8rem;
+}
+
+/* Cuadro de Nequi */
+.nequi-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f0f0f0;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border-left: 5px solid #3F39A3;
+    font-size: 0.9rem;
+}
+
+.nequi-info strong {
+    color: #3F39A3;
+}
+
+
+.noticia-imagen {
+    flex: 1; 
+    position: relative;
+    height: 550px; 
+    overflow: hidden; 
+    border-radius: 15px 0 0 15px; 
+}
+
+.noticia-imagen img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    object-position: center; 
+}
 
 /* CONTACTO */
 /* SECCIÓN CONTACTO */
@@ -260,21 +342,34 @@ section h2::after {
 
 /* ICONOS */
 .redes-cuadro a {
+    max-width: 700px;
     text-decoration: none;
     color: #333;
     font-size: 32px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20 40px;
     transition: 0.3s;
+}
+.redes-cuadro a p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #444;
 }
 
 /* INSTAGRAM */
-.redes-cuadro a i.fa-brands {
-    color: #188509;
-}
+
 .redes-cuadro a i.fa-instagram {
     color: #E1306C;
+}
+.fa-facebook {
+     color: #1877F2; 
+}
+.fa-tiktok {
+     color: #000000;
+}
+.fa-whatsapp {
+     color: #25D366;
 }
 
 /* EMAIL */
@@ -455,6 +550,10 @@ footer {
     #galeria div img {
         width: 100%;
         height: 250px;
+    }
+    .noticia-imagen {
+        height: 300px; 
+        border-radius: 15px 15px 0 0; 
     }
     .redes-cuadro {
         flex-direction: column; 
