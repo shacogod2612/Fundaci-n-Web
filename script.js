@@ -50,7 +50,7 @@
 // --- NUEVO SISTEMA DE ANIMACIÓN (Intersection Observer) ---
 const observerOptions = {
     root: null, // usa la pantalla como referencia
-    threshold: 0.15, // se activa cuando el 15% del elemento es visible
+    threshold: 0.08, // se activa cuando el 15% del elemento es visible
     rootMargin: "0px 0px -50px 0px" // margen inferior para anticipar la entrada
 };
 
