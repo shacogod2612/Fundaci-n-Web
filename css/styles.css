@@ -509,13 +509,15 @@ footer {
 /* Clase para animar elementos al bajar */
 .revelar {
     opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease-out;
+    transform: translateY(20px); /* Bajamos de 30px a 20px para que el salto sea menor */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    visibility: hidden; /* Añadimos esto para asegurar que no bloquee clics mientras es invisible */
 }
 
 .revelar.activo {
     opacity: 1;
     transform: translateY(0);
+    visibility: visible;
 }
 
 
