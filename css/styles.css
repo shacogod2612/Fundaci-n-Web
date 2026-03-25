@@ -31,6 +31,9 @@ a, .btn {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
 }
+p {
+    text-align: center;
+}
 
 /* HEADER */
 header {
