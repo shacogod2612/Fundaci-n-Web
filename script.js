@@ -47,19 +47,30 @@
             lightbox.style.display = "none";
         }
     });
-    const mostrarElementos = () => {
-        const elementos = document.querySelectorAll('.revelar');
-        elementos.forEach(el => {
-            const posicion = el.getBoundingClientRect().top;
-            const alturaPantalla = window.innerHeight;
+// --- NUEVO SISTEMA DE ANIMACIÓN (Intersection Observer) ---
+const observerOptions = {
+    root: null, // usa la pantalla como referencia
+    threshold: 0.15, // se activa cuando el 15% del elemento es visible
+    rootMargin: "0px 0px -50px 0px" // margen inferior para anticipar la entrada
+};
 
-            // Cambiamos el cálculo: si la parte superior del elemento 
-            // entra al 85% de la pantalla, ya se activa.
-            if (posicion < alturaPantalla * 0.85) {
-                el.classList.add('activo');
-            }
-        });
-    };
+const aparecerAlScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('activo');
+            // Una vez que aparece, dejamos de observarlo para ahorrar recursos
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+// Buscamos todos los elementos con la clase revelar y los ponemos a observar
+document.addEventListener("DOMContentLoaded", () => {
+    const elementosParaAnimar = document.querySelectorAll('.revelar');
+    elementosParaAnimar.forEach(el => {
+        aparecerAlScroll.observe(el);
+    });
+});
 
 // 1. Escuchar el scroll (esto ya lo tienes)
 window.addEventListener('load', mostrarElementos);
