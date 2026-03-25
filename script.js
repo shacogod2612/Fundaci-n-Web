@@ -47,3 +47,12 @@
             lightbox.style.display = "none";
         }
     });
+    window.addEventListener('scroll', () => {
+    const elementos = document.querySelectorAll('.revelar');
+    elementos.forEach(el => {
+        const posicion = el.getBoundingClientRect().top;
+        if (posicion < window.innerHeight - 100) {
+            el.classList.add('activo');
+        }
+    });
+});
