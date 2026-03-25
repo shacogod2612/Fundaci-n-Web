@@ -47,12 +47,19 @@
             lightbox.style.display = "none";
         }
     });
-    window.addEventListener('scroll', () => {
+const mostrarElementos = () => {
     const elementos = document.querySelectorAll('.revelar');
     elementos.forEach(el => {
         const posicion = el.getBoundingClientRect().top;
-        if (posicion < window.innerHeight - 100) {
+        // Si el elemento ya está a la vista (o casi a la vista), lo activamos
+        if (posicion < window.innerHeight - 50) {
             el.classList.add('activo');
         }
     });
-});
+};
+
+// 1. Escuchar el scroll (esto ya lo tienes)
+window.addEventListener('scroll', mostrarElementos);
+
+// 2. ¡EL TRUCO! Ejecutarlo apenas cargue el sitio
+window.addEventListener('DOMContentLoaded', mostrarElementos);
