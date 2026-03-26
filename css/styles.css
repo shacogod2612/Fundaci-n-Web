@@ -325,7 +325,7 @@ section h2::after {
 .noticia-imagen {
     flex: 1; 
     position: relative;
-    height: 550px; 
+    height: 100%;
     overflow: hidden; 
     border-radius: 15px 0 0 15px; 
 }
@@ -625,7 +625,7 @@ footer {
     }
     
     .noticia-imagen {
-        height: 300px; 
+        height: 100%; 
         border-radius: 15px 15px 0 0; 
     }
     .redes-cuadro {
