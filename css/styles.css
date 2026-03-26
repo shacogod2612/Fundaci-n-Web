@@ -459,6 +459,56 @@ footer {
     padding: 15px;
     margin-top: 40px;
 }
+.footer-location {
+    margin: 15px 0;
+}
+.location-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Un fondo sutil transparente */
+    padding: 8px 15px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: var(--transicion);
+}
+.location-badge:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+.location-badge span {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #FAF5EF;
+    letter-spacing: 0.5px;
+}
+.footer-copy {
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    width: 100%;
+}
+.dev-link {
+    text-decoration: none;
+    color: #FAF5EF; /* Color crema que usas */
+    font-weight: 700;
+    margin-left: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transicion);
+}
+.dev-link i {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+.dev-link:hover {
+    color: #ff0050; 
+    transform: scale(1.05);
+}
+.dev-link:hover i {
+    transform: rotate(15deg);
+}
 
 /* HAMBURGUESA */
 .menu-toggle {
@@ -648,7 +698,29 @@ footer {
         font-size: 22px;
         padding: 8px 12px;
     }
+    .footer-content {
+        padding: 0 20px;
+    }
+
+    .location-badge {
+        width: 100%; 
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    .footer-copy {
+        flex-direction: column; 
+        gap: 10px;
+        text-align: center;
+    }
+
+    .dev-by {
+        display: block;
+        margin-top: 10px;
+        font-size: 0.85rem;
+    }
 }
+
 
 @media (max-width: 460px) {
          .redes-cuadro {
